@@ -1,9 +1,9 @@
 # playframework zip name
-VERSION="play-2.2.1"
+VERSION="typesafe-activator-1.2.10"
 PKG="$VERSION.zip"
 
 # playframework download URL
-URL="http://downloads.typesafe.com/play/2.2.1/$PKG"
+URL="http://downloads.typesafe.com/typesafe-activator/1.2.10/$PKG"
 
 # Shell setup
 unalias -a
@@ -27,6 +27,6 @@ curl --output "/tmp/$PKG" "$URL"
 # Install playframework
 cd /usr/local
 unzip "/tmp/$PKG"
-ln -s $VERSION play
+ln -s activator-1.2.10 activator
 
 

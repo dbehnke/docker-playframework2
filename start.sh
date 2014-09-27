@@ -20,7 +20,7 @@ if ! [ -d /application ] ; then
 fi
 
 cd /application
-/usr/local/play/play clean stage
+/usr/local/activator/activator play clean stage exit
 
 shopt -s extglob
 exec target/universal/stage/bin/!(*.bat)

@@ -14,13 +14,13 @@ if [ -n "$LC_ALL" ] && [ "$LC_ALL" != "$LANG" ] ; then
     locale-gen "$LC_ALL"
 fi
 
-if ! [ -d /application ] ; then
+if ! [ -d /data ] ; then
     echo "Cannot find application directory" > /dev/stderr
     exit 1
 fi
 
-cd /application
-/usr/local/activator/activator play clean stage exit
+cd /data
+/opt/activator/activator play clean stage exit
 
 shopt -s extglob
 exec target/universal/stage/bin/!(*.bat)

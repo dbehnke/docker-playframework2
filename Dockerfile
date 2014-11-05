@@ -1,10 +1,5 @@
-FROM ubuntu:trusty
-MAINTAINER Chris Hardekopf <cjh@ygdrasill.com>
-
-# Install prerequisites
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y wget unzip default-jre default-jdk && \
-    rm -rf /var/lib/apt/lists/*
+FROM dbehnke/jdk:7
+MAINTAINER Dave Behnke <boolean74@gmail.com>
 
 # Install typesafe activator
 RUN export VERSION=1.2.10 && \

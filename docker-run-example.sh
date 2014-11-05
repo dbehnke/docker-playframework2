@@ -6,5 +6,5 @@ ivy2dir=$HOME/.ivy2
 echo Expecting Play Application in ${appdir}
 echo Ivy2 cache pointing to ${ivy2dir}
 
-docker run -P -v $appdir:/app -v $ivy2dir:/root/.ivy2 -it dbehnke/playframework2:latest 
+docker run -p 0.0.0.0:9000:9000 -v $appdir:/app -v $ivy2dir:/root/.ivy2 -it dbehnke/playframework2:latest 
 
